@@ -1,0 +1,452 @@
+// MDL v1 utf8
+mevislabVersion = 3.3
+network  {
+  watchlist = ""
+}
+module View2D {
+  internal  {
+    frame = "417 213 80 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "38 324 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = FALSE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 0
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_Z
+    cineDirection = CINE_PINGPONG
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = FALSE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 793.212829589844
+    lutWidth = 1703.68225097656
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module Mask {
+  internal  {
+    frame = "397 309 120 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1025 538 441 124"
+        sizeHint = "353 124"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Mask
+    mode = MaskedOriginal
+    outputImageSize = InvalidateOutputIfSizesDiffer
+    blending = 0.5
+    background = 0
+  }
+}
+module BoundingBoxInReferenceSystem {
+  internal  {
+    frame = "321 429 240 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "54 401 400 323"
+        sizeHint = "400 323"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = BoundingBoxInReferenceSystem
+    inBoundingBoxMode = VoxelVolume
+    inOutputBoundingBoxMode = Round
+    inZeroImageData = FALSE
+    onInputChangeBehavior = Update
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "1057 601 192 80"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1043 574 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = case_1_T1_post
+    filename = $(NETWORK)/case1_T1_post.mlimage
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "769 549 192 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "723 394 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad
+    filename = $(NETWORK)/case1_T1_post.mlimage
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "493 541 184 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "897 574 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad1
+    filename = $(NETWORK)/case1_T1_post_tumormask.mlimage
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "1009 489 224 80"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "897 574 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = case_1_T1_post_tumormask
+    filename = $(NETWORK)/case1_T1_post_tumormask.mlimage
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module ImageLoad {
+  internal  {
+    frame = "233 533 192 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1043 574 474 353"
+        sizeHint = "474 353"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImageLoad2
+    filename = $(NETWORK)/case1_T1_post.mlimage
+    autoLoad = TRUE
+    readRaw = FALSE
+    rawX = 1
+    rawY = 1
+    rawZ = 1
+    rawC = 1
+    rawT = 1
+    rawU = 1
+    dataTypeRaw = "unsigned int8"
+    planarConfig = Contiguous
+    byteOrder = LittleEndian
+    dataOffset = 0
+    pageSizeHint = "0 0 0 0 0 0"
+    suppressErrorLog = FALSE
+    dicomIgnoreHalfVoxelShift = FALSE
+    enableCheckSumTests = FALSE
+  }
+}
+module View3D {
+  internal  {
+    frame = "257 213 144 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "481 399 1005 609"
+        sizeHint = "1005 609"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View3D
+    autoViewAll = TRUE
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    lutType = Ramp
+    rendererType = Slicer
+    currentTimePoint = 0
+    staticSamplingRate = 1
+    quality = 1
+    filterVolumeData = FilterLinear
+    lutEditorColorPoints = "[ 0 0 0 0, 4095 1 1 1 ]"
+    lutEditorAlphaPoints = "[ 0 0, 4095 1 ]"
+    lutEditorRelativeLut = FALSE
+    lutEditorColorInterpolation = InterpolateRGB
+    lutEditorAlphaFactor = 1
+    orientationProjectionType = PERSPECTIVE
+    orientationLocation = LOWER_RIGHT
+    orientationOn = TRUE
+    orientationModel = CUBE
+    greyCenter = 0.5
+    greyWidth = 0.5
+    alphaFactor = 1
+    colorFactor = "1 1 1"
+    camType = TRUE
+    camPosition = "24.0965270996094 65.7418899536133 64.9302062988281"
+    camOrientation = "-0.0339881740510464 -0.82141375541687 -0.569319188594818 3.98849272727966"
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    camFar = 67.720825
+    camNear = 35.648861
+    camFocal = 51.668861
+    camHeight = 0.78539801
+    decoration = FALSE
+    annotations = TRUE
+    background = TRUE
+    mode = VolumeRendering
+    interactiveQuality = Medium
+  }
+  internalFields  {
+    renderer.gradientQuality = GradientQualityAutomatic
+    renderer.enhancementAlphaMix = 0.25
+    renderer.boundaryEnhancement = FALSE
+    renderer.boundaryEnhancementFactor = 1
+    renderer.boundaryEnhancementExponent = 1
+    renderer.boundaryEnhancementGradientBias = 0
+    renderer.silhouetteEnhancement = FALSE
+    renderer.silhouetteEnhancementExponent = 1
+    renderer.silhouetteEnhancementFactor = 1
+    renderer.toneShading = FALSE
+    renderer.toneShadingWarmColor = "0.67451000213623 0.533333003520966 0.141176000237465"
+    renderer.toneShadingColdColor = "0 0 0.400000005960464"
+    renderer.toneShadingWarmDiffuse = 0.60000002
+    renderer.toneShadingColdDiffuse = 0.2
+    renderer.toneShadingAngle = 45
+    renderer.materialAmbient = 0.60000002
+    renderer.materialDiffuse = 1
+    renderer.materialSpecular = 1
+    renderer.materialSpecularity = 32
+    renderer.light1Enabled = TRUE
+    renderer.light1DiffuseIntensity = 1
+    renderer.light1SpecularIntensity = 1
+    renderer.light1Color = "1 1 1"
+    renderer.light1PolarPhi = 45
+    renderer.light1PolarRho = 0
+    renderer.light2Enabled = FALSE
+    renderer.light2DiffuseIntensity = 1
+    renderer.light2SpecularIntensity = 1
+    renderer.light2Color = "1 1 1"
+    renderer.light2PolarPhi = 0
+    renderer.light2PolarRho = 0
+    renderer.light3Enabled = FALSE
+    renderer.light3DiffuseIntensity = 1
+    renderer.light3SpecularIntensity = 1
+    renderer.light3Color = "1 1 1"
+    renderer.light3PolarPhi = -45
+    renderer.light3PolarRho = 0
+    renderer.sizeOutputX = 44
+    renderer.sizeOutputY = 43
+    renderer.sizeOutputZ = 19
+    renderer.subVolumeStartX = 0
+    renderer.subVolumeStartY = 0
+    renderer.subVolumeStartZ = 0
+    renderer.subVolumeEndX = 44
+    renderer.subVolumeEndY = 43
+    renderer.subVolumeEndZ = 19
+    clip.hideGeometry = FALSE
+    clip.on = FALSE
+    clip.left = FALSE
+    clip.right = FALSE
+    clip.top = FALSE
+    clip.bottom = FALSE
+    clip.rear = FALSE
+    clip.front = FALSE
+    clip.translation0 = "1 0 0"
+    clip.translation1 = "-1 0 0"
+    clip.translation2 = "0 1 0"
+    clip.translation3 = "0 -1 0"
+    clip.translation4 = "0 0 1"
+    clip.translation5 = "0 0 -1"
+    clip.rotation0 = "0 0 0.999999940395355 1.57079994678497"
+    clip.rotation1 = "0 0 -0.999999940395355 1.57079994678497"
+    clip.rotation2 = "0 0 -1 3.1415901184082"
+    clip.rotation3 = "0 0 1 0"
+    clip.rotation4 = "-0.999999940395355 0 0 1.57079994678497"
+    clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
+  }
+}
+connections  {
+  View2D.inImage = Mask.output0
+  Mask.input0 = BoundingBoxInReferenceSystem.output0
+  Mask.input1 = ImageLoad1.output0
+  BoundingBoxInReferenceSystem.input0 = ImageLoad1.output0
+  BoundingBoxInReferenceSystem.input1 = ImageLoad2.output0
+  View3D.inImage = Mask.output0
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 29
+        objectName = ""
+        parentUniqueId = 0
+        frame = "612 237 490 199"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "Students encountered the problem that they do not know how to transform the supplied tumour mask to the world coordinates of the case_1_T1_post volume.
+
+This can be achieved by using BoundingnBoxInReferenceSystem, where we use the case_1_T1_post volume as the reference and the tumour mask as the input. The module will output the subvolume with the tumour.
+
+Afterwards, the students are free to further mask out the surrounding tissue. BoundingBoxInReferenceSystem only slices the correct sub-volume."
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>Students encountered the problem that they do not know how to transform the supplied tumour mask to the world coordinates of the case_1_T1_post volume.</p>
+<p>This can be achieved by using BoundingnBoxInReferenceSystem, where we use the case_1_T1_post volume as the reference and the tumour mask as the input. The module will output the subvolume with the tumour.</p>
+<p>Afterwards, the students are free to further mask out the surrounding tissue. BoundingBoxInReferenceSystem only slices the correct sub-volume.</p>
+
+
+  </body>
+</html>*"
+        titleText = "How to transform the tumour mask to the anatomical reference"
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "617 242 480 22"
+      }
+    }
+  }
+}

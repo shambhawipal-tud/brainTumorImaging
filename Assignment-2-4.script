@@ -1,0 +1,111 @@
+Interface {
+  Parameters {
+    Field persistentToggle { type = Bool value = false }
+  }
+}
+
+Commands {
+
+}
+
+Window {
+  expandY = YES  
+  
+  Splitter {
+    TabView {
+      TabViewItem "Import" {
+        Horizontal {
+        
+          // A TabView lets us have multiple options or settings in a compact area
+              Vertical {
+                expandX        = NO
+                panelName      = "Some_Settings"
+          
+                Box "Choose which file to import" {        
+                  Panel {
+                    module = DirectDicomImport
+                    name  = "Import"
+                  }
+                }
+              }
+            }
+      }
+      
+      TabViewItem "Iso Panel" {
+        Horizontal {
+        
+          // A TabView lets us have multiple options or settings in a compact area
+          Box "2D View" {
+            Viewer OrthoView2D.self {
+              name            = "Viewer_2D"    
+              clone           = NO
+              preferredWidth  = 600
+              preferredHeight = 500
+            }
+          }
+          Box "Interval threshold" {
+            Panel {
+              name = "interval"
+              module = IntervalThreshold
+              panel = threshInterval 
+            }
+          }
+          Box "3D View" {
+            TabView {
+              TabViewItem "Full View" {
+                Viewer SoExaminerViewer2.self {
+                  name            = "Viewer_3D1"    
+                  clone           = NO
+                  preferredWidth  = 600
+                  preferredHeight = 500
+                }
+              }
+              TabViewItem "Isolated View" {
+                Viewer SoExaminerViewer1.self {
+                  name            = "Viewer_3D2"    
+                  clone           = NO
+                  preferredWidth  = 600
+                  preferredHeight = 500
+                }
+              }
+            }
+          }
+        }
+      } 
+      
+      TabViewItem "MPR Panel" {
+        Horizontal {
+        
+          // A TabView lets us have multiple options or settings in a compact area
+          Box "Dragger" {
+            Viewer Dragger.self {
+              name            = "Dragger"    
+              clone           = NO
+              preferredWidth  = 600
+              preferredHeight = 500
+            }
+          }
+          Vertical {
+            expandX        = NO
+            preferredWidth = 400
+            panelName      = "Some_Settings"
+            
+            TextView {
+              title = "How to use"
+              text = "This is the MPR panel. The plane in the 3D view on the left controls the Multi-Planar Reformation on the right"
+              edit = NO
+            }
+          }
+          Box "MPR View" {
+            Viewer OrthoView2D1.self {
+              name            = "MPRView"    
+              clone           = NO
+              preferredWidth  = 600
+              preferredHeight = 500
+            }
+          }
+        }
+      } 
+    }
+  }
+}
